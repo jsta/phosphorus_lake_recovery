@@ -6,8 +6,8 @@ library(rgdal)
 library(mapview)
 library(rstudioapi)
 
-current_path <- getActiveDocumentContext()$path
-setwd(dirname(current_path))
+# current_path <- getActiveDocumentContext()$path
+# setwd(dirname(current_path))
 
 ##
 scenario <- 2 # Enter "1" for influent step drop, or "2" for exponential drop
@@ -38,7 +38,7 @@ DF1 <- filter(DF1, ST %in% states2map)
 
 DF1 <- filter(DF1, tau_d >= 7) # Added 08/24/21
 
-names(DF1)[names(DF1) == "Lake_tp_ug"] <- "Lake_TP_ppb"
+names(DF1)[names(DF1) == "LakeTP_ugL"] <- "Lake_TP_ppb"
 DF1 <- filter(DF1, Lake_TP_ppb > 0)
 
 DF1$Target_TP_ppb <- toString(Cf)

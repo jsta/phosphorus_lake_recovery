@@ -6,8 +6,8 @@ library(rgdal)
 library(mapview)
 library(rstudioapi)
 
-current_path <- getActiveDocumentContext()$path
-setwd(dirname(current_path))
+# current_path <- getActiveDocumentContext()$path
+# setwd(dirname(current_path))
 
 ## Dimensionless recovery target
 target <- 0.75  #  This is the target (1-beta)/(1-alpha) value.
